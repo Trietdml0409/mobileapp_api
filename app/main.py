@@ -1,11 +1,14 @@
 from fastapi import FastAPI, Response
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
+from user_controller import router  # import your controller
 import json
 
-from models import Product
-from utils import standardize_response
-from services import get_products_service, update_product_service
+
+
+from app.models import Product
+from app.utils import standardize_response
+from app.services import get_products_service, update_product_service
 
 app = FastAPI()
 
@@ -29,19 +32,6 @@ app.add_middleware(
 async def root():
     return {"message":"Hello world"}
 
-
-# Getting the current user, this is the fixed path
-@app.get("/users/me")
-async def read_user_me():
-    return {"user_id": "the current user"}
-
-
-# Return an Id with {user_id} passed in
-@app.get("/users/{user_id}")
-async def read_user(user_id: str):
-    return {"user_id": user_id}
-
-
 @app.get("/products")
 async def get_products():
     products = get_products_service()
@@ -59,3 +49,4 @@ async def update_product(product_id: int, product: Product):
     return standardize_response(
         updated_product, custom_message="Product updated successfully"
     )
+

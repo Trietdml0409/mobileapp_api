@@ -10,3 +10,6 @@ class Product(BaseModel):
     isBestSeller: bool
     brandName: str
     liked: bool = False
+
+
+
