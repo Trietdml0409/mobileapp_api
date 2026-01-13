@@ -1,14 +1,15 @@
-from fastapi import FastAPI, Response
+import sys
+from pathlib import Path
+
+from app.controllers import product_controller
+
+# Add the project root to Python path to allow absolute imports
+project_root = Path(__file__).parent.parent
+sys.path.insert(0, str(project_root))
+
+from fastapi import APIRouter, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
-from user_controller import router  # import your controller
-import json
 
-
-
-from app.models import Product
-from app.utils import standardize_response
-from app.services import get_products_service, update_product_service
 
 app = FastAPI()
 
@@ -28,25 +29,15 @@ app.add_middleware(
 )
 
 
-@app.get("/")
+# Router root: /
+router = APIRouter()
+
+
+@router.get("/")
 async def root():
-    return {"message":"Hello world"}
-
-@app.get("/products")
-async def get_products():
-    products = get_products_service()
-
-    return standardize_response(products, "Products fetched successfully")
+    return {"message": "Hello world"}
 
 
-# Update a product by id
-@app.put("/products/{product_id}")
-async def update_product(product_id: int, product: Product):
-    updated_product = update_product_service(product_id, product)
-    if not updated_product:
-        return Response(status_code=404, content="Product not found")
-
-    return standardize_response(
-        updated_product, custom_message="Product updated successfully"
-    )
-
+# include product controller here
+app.include_router(product_controller.router)
+# app.include_router(user_controller.router)

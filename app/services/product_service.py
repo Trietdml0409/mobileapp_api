@@ -1,18 +1,18 @@
-from app.models import Product
-from app.repository import accessJson
+from app.models.models import Product
+from app.repositories.product_repository import load_default_products
 
 
-default_products = accessJson()
+DEFAULT_PRODUCTS = load_default_products()
 
 
-def get_products_service(): #from service.py
-    return default_products
+def get_products_service():  # from service.py
+    return DEFAULT_PRODUCTS
 
 
 def update_product_service(product_id: int, product: Product):
     has_product = False
     product_index = -1
-    for i, p in enumerate(default_products):
+    for i, p in enumerate(DEFAULT_PRODUCTS):
         if p["id"] == product_id:
             has_product = True
             product_index = i
@@ -33,8 +33,16 @@ def update_product_service(product_id: int, product: Product):
     }
 
     # Update the product in the list by index
-    default_products[product_index] = updated_product
+    DEFAULT_PRODUCTS[product_index] = updated_product
     # Save: file/database
     # call model to save the product
 
     return updated_product
+
+
+def get_product_service(product_id: int) -> Product | None:
+    for product in DEFAULT_PRODUCTS:
+        if product["id"] == product_id:
+            return product
+
+    return None
