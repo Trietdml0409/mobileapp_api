@@ -2,6 +2,7 @@ import sys
 from pathlib import Path
 
 from app.controllers import product_controller
+from app.controllers import user_controller
 
 # Add the project root to Python path to allow absolute imports
 project_root = Path(__file__).parent.parent
@@ -40,4 +41,4 @@ async def root():
 
 # include product controller here
 app.include_router(product_controller.router)
-# app.include_router(user_controller.router)
+app.include_router(user_controller.router)

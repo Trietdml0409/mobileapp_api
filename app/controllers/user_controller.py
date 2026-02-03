@@ -9,7 +9,6 @@ from app.utils import standardize_response
 router = APIRouter(prefix="/usernames")
 
 
-# /products/
 @router.get("/")
 async def get_usernames():
     usernames = get_usernames_service()
