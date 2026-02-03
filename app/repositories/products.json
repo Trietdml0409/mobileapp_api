@@ -44,5 +44,79 @@
     "createdAt": "2026-3-1",
     "isBestSeller": false,
     "brandName": "AMD"
-  }
+  },
+  {
+    "id": 60,
+    "name": "PC Intel Core i9 12900K Elite",
+    "price": 35000000,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK9kc8Lvcn2EVN_RFC92AuV3AeDHJY_MRW3w&s",
+    "createdAt": "2026-3-3",
+    "isBestSeller": true,
+    "brandName": "Intel"
+  },
+  {
+    "id": 70,
+    "name": "PC Intel Core i7 12700F Creator Edition",
+    "price": 27000000,
+    "image": "https://cdn2.cellphones.com.vn/x/media/catalog/product/p/c/pc-cps-gaming-g13_1_.png",
+    "createdAt": "2026-3-5",
+    "isBestSeller": false,
+    "brandName": "Intel"
+  },
+  {
+    "id": 80,
+    "name": "PC Ryzen Threadripper Pro 5975WX Workstation",
+    "price": 60000000,
+    "image": "https://product.hstatic.net/1000129940/product/pc_aps_x_amd_ryzen_threadripper_pro_5975wx_7e00635c1e654bc19e14f2aead2cc0fb_master.png",
+    "createdAt": "2026-3-6",
+    "isBestSeller": true,
+    "brandName": "AMD"
+  },
+  {
+  "id": 90,
+  "name": "PC Intel Core i5 12600K Gaming Rig",
+  "price": 22000000,
+  "image": "https://m.media-amazon.com/images/I/91M4ZSKfn8L.jpg",
+  "createdAt": "2026-3-7",
+  "isBestSeller": false,
+  "brandName": "Intel"
+},
+{
+  "id": 100,
+  "name": "PC AMD Ryzen 3 5300G Entry Build",
+  "price": 15000000,
+  "image": "https://m.media-amazon.com/images/I/81n2SioeSHS._AC_UF894,1000_QL80_.jpg",
+  "createdAt": "2026-3-8",
+  "isBestSeller": true,
+  "brandName": "AMD"
+},
+{
+  "id": 110,
+  "name": "PC NVIDIA RTX 4060 Ti Creator Pro",
+  "price": 40000000,
+  "image": "https://bizweb.dktcdn.net/thumb/1024x1024/100/329/122/products/ap201-bk.jpg?v=1725521336987",
+  "createdAt": "2026-3-9",
+  "isBestSeller": true,
+  "brandName": "NVIDIA"
+},
+{
+  "id": 120,
+  "name": "PC Intel Core i3 12100F Budget Edition",
+  "price": 12000000,
+  "image": "https://pcmarket.vn/media/product/10606_w.jpg",
+  "createdAt": "2026-3-10",
+  "isBestSeller": false,
+  "brandName": "Intel"
+},
+{
+  "id": 130,
+  "name": "PC AMD Ryzen 9 7950X Ultimate Gaming",
+  "price": 65000000,
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCp1ZyjCJB3Ck9bkkwxrJ312CVPixcislL_w&s",
+  "createdAt": "2026-3-11",
+  "isBestSeller": true,
+  "brandName": "AMD"
+}
+
 ]
+

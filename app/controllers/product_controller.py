@@ -32,6 +32,7 @@ async def update_product(product_id: int, product: Product):
     )
 
 
+
 # /products/{product_id}
 @router.get("/{product_id}")
 async def get_product(product_id: int):

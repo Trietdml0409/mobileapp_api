@@ -11,5 +11,11 @@ class Product(BaseModel):
     brandName: str
     liked: bool = False
 
+class Username(BaseModel):
+    id: int
+    username: str
+    password: str
+    createdAt: str
+
 
 
