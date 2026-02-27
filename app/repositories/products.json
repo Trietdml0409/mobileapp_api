@@ -7,7 +7,23 @@
     "createdAt": "2026-3-1",
     "isBestSeller": true,
     "brandName": "NVIDIA",
-    "liked": false
+    "liked": false,
+    "comments": [
+      {
+        "id": 1,
+        "content": "Máy này rất tốt",
+        "createdAt": "2026-3-1",
+        "author": "John Doe",
+        "authorAvatar": "https://via.placeholder.com/150"
+      },
+      {
+        "id": 2,
+        "content": "Tôi thích máy này",
+        "createdAt": "2026-3-1",
+        "author": "Jane Doe",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
   },
   {
     "id": 20,
